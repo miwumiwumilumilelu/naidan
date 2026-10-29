@@ -6,11 +6,12 @@
 #include <string>
 #include <vector>
 #include <string_view>
+#include <limits>
 
 namespace naidan {
 
 using FileId = std::uint32_t;
-inline constexpr FileId InvalidFileId = static_cast<FileId>(-1);
+inline constexpr FileId InvalidFileId = std::numeric_limits<FileId>::max();
 
 struct SourceLocation {
     FileId fileId = InvalidFileId;
