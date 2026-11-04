@@ -21,10 +21,8 @@ option(NAIDAN_BUILD_TESTS "Build Naidan tests" ON)
 
 add_subdirectory(include)
 add_subdirectory(lib)
-add_subdirectory(tools)
 
 if(NAIDAN_BUILD_TESTS)
   enable_testing()
-  add_subdirectory(test)
   add_subdirectory(unittests)
 endif()
